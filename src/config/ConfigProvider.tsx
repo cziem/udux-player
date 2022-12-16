@@ -1,4 +1,5 @@
 import { ConfigProvider, theme } from "antd"
+import { Config } from "./Config"
 
 interface Props {
   children: React.ReactNode
@@ -6,7 +7,7 @@ interface Props {
 export const AntdConfigProvider: React.FC<Props> = ({ children }) => (
   <ConfigProvider
     theme={{
-      hashed: false, // TODO: use config to check dev mode here
+      hashed: Config.DEBUG,
       algorithm: theme.darkAlgorithm,
     }}
   >
