@@ -1,13 +1,17 @@
-import { Layouts } from "components"
+import { Category, CoverArt, Layouts } from "components"
 import { AntdConfigProvider } from "config"
-import React from "react"
+import { playlistCategories } from "utils"
 import "./App.css"
 
 function App() {
   return (
     <AntdConfigProvider>
       <Layouts>
-        <p>Content goes here</p>
+        <CoverArt />
+
+        {playlistCategories.map((pc, idx) => (
+          <Category {...pc} key={`${idx}-${pc.title}`} />
+        ))}
       </Layouts>
     </AntdConfigProvider>
   )

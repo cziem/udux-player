@@ -21,10 +21,10 @@ export const Layouts: React.FC<Props> = ({ children }) => {
 
         <Content
           style={{
-            margin: "24px 16px",
-            padding: 24,
+            margin: "76px 16px 16px 12px",
+            padding: "12 24",
             minHeight: 280,
-            background: colorBgContainer,
+            background: "#000",
           }}
         >
           {children}

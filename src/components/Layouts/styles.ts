@@ -6,7 +6,7 @@ export const StyledLayout: React.FC<LayoutProps> = styled(Layout)`
   min-height: 100vh;
 
   .ant-layout .ant-layout-header {
-    height: 95px;
+    height: 75px;
     position: fixed;
     top: 0;
     width: 100%;
