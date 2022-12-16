@@ -9,7 +9,7 @@ import React, { useState } from "react"
 const { Sider } = Layout
 
 export const Drawer: React.FC = () => {
-  const [collapsed, setCollapsed] = useState(false)
+  const [collapsed] = useState(false)
 
   return (
     <Sider trigger={null} collapsible collapsed={collapsed} width="295">

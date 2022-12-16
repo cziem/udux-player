@@ -1,8 +1,7 @@
-import { MenuFoldOutlined, MenuUnfoldOutlined } from "@ant-design/icons"
-import { Layout, theme } from "antd"
+import { theme } from "antd"
+import { ArrowBack, ArrowFront } from "components/Icons"
 import React from "react"
-
-const { Header: AntHeader } = Layout
+import { StyledHeader } from "./styles"
 
 export const Header = () => {
   const [collapsed, setCollapsed] = React.useState(false)
@@ -11,11 +10,17 @@ export const Header = () => {
   } = theme.useToken()
 
   return (
-    <AntHeader style={{ padding: 0, background: colorBgContainer }}>
-      {React.createElement(collapsed ? MenuUnfoldOutlined : MenuFoldOutlined, {
-        className: "trigger",
-        onClick: () => setCollapsed(!collapsed),
-      })}
-    </AntHeader>
+    <StyledHeader style={{ background: "#000", paddingInline: "4px" }}>
+      <div className="navigators">
+        <div className="icon-wrapper">
+          <ArrowBack />
+        </div>
+        <div className="icon-wrapper">
+          <ArrowFront />
+        </div>
+      </div>
+
+      <div className="search-wrapper"></div>
+    </StyledHeader>
   )
 }

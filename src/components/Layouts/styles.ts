@@ -6,6 +6,6 @@ export const StyledLayout: React.FC<LayoutProps> = styled(Layout)`
   min-height: 100vh;
 
   .site-layout {
-    padding-left: 0.2em;
+    /* padding-left: 0.2em; */
   }
 `
