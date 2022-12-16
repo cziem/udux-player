@@ -1,4 +1,4 @@
-import { Layout, theme } from "antd"
+import { Layout } from "antd"
 import { Drawer, Header } from "./components"
 import { StyledLayout } from "./styles"
 
@@ -8,10 +8,6 @@ interface Props {
   children: React.ReactNode
 }
 export const Layouts: React.FC<Props> = ({ children }) => {
-  const {
-    token: { colorBgContainer },
-  } = theme.useToken()
-
   return (
     <StyledLayout hasSider>
       <Drawer />
