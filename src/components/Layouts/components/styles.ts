@@ -8,6 +8,7 @@ export const StyledHeader: React.FC<LayoutProps> = styled(Header)`
   display: flex;
   align-items: center;
   height: 95px;
+  z-index: 9999;
 
   .navigators {
     display: flex;

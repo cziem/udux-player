@@ -7,7 +7,7 @@ interface Props {
 export const AntdConfigProvider: React.FC<Props> = ({ children }) => (
   <ConfigProvider
     theme={{
-      hashed: !Config.DEBUG,
+      hashed: Config.DEBUG,
       algorithm: theme.darkAlgorithm,
     }}
   >
