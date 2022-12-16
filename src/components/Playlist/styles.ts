@@ -1,4 +1,4 @@
-import { Space, SpaceProps } from "antd"
+import { SpaceProps } from "antd"
 import React from "react"
 import styled from "styled-components"
 
@@ -37,12 +37,10 @@ export const StyledPlaylist: React.FC<SpaceProps> = styled("div")`
 
   .pl-info {
     background: #0f0f0f;
-    /* height: 75px; */
     padding: 1em 2em;
     display: flex;
     justify-content: center;
     flex-direction: column;
-    /* flex: 1; */
 
     h5.ant-typography {
       text-transform: capitalize;

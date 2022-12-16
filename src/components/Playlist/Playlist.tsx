@@ -1,4 +1,4 @@
-import { Space, Typography } from "antd"
+import { Typography } from "antd"
 import classNames from "classnames"
 import { truncate } from "utils"
 import { StyledPlaylist } from "./styles"
@@ -21,6 +21,7 @@ export const Playlist: React.FC<PlaylistProps> = ({
         </div>
         <div className={classNames("bng-holder", accent)}></div>
       </div>
+
       <div className={classNames("pl-info", accent)}>
         <Title level={5}>{title}</Title>
         <Text className="desc">{truncate(description)}</Text>
