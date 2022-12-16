@@ -1,5 +1,5 @@
-import { theme } from "antd"
-import { ArrowBack, ArrowFront } from "components/Icons"
+import { Input, theme } from "antd"
+import { ArrowBack, ArrowFront, SearchIcon } from "components/Icons"
 import React from "react"
 import { StyledHeader } from "./styles"
 
@@ -20,7 +20,10 @@ export const Header = () => {
         </div>
       </div>
 
-      <div className="search-wrapper"></div>
+      <div className="search-wrapper">
+        <SearchIcon />
+        <Input type="search" />
+      </div>
     </StyledHeader>
   )
 }
