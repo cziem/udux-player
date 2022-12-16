@@ -47,6 +47,10 @@ export const StyledHeader: React.FC<LayoutProps> = styled(Header)`
       }
     }
   }
+
+  @media screen and (max-width: 992px) {
+    display: none;
+  }
 `
 
 export const StyledSider: React.FC<SiderProps> = styled(Sider)`
@@ -55,20 +59,6 @@ export const StyledSider: React.FC<SiderProps> = styled(Sider)`
     flex-direction: column;
     position: fixed;
     width: 295px;
-  }
-
-  .profile-wrapper {
-    background: #0f0f0f;
-    height: 95px;
-    margin-bottom: 0.2em;
-    display: flex;
-    align-items: center;
-
-    .avatar {
-      cursor: pointer;
-      padding-left: 1em;
-      margin-right: 1em;
-    }
   }
 
   .player-menu {
@@ -129,5 +119,9 @@ export const StyledSider: React.FC<SiderProps> = styled(Sider)`
         }
       }
     }
+  }
+
+  @media screen and (max-width: 992px) {
+    display: none;
   }
 `

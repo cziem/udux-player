@@ -29,4 +29,22 @@ export const StyledCoverArt: React.FC<SpaceProps> = styled("div")`
     align-self: flex-end;
     padding-right: 4em;
   }
+
+  @media screen and (min-width: 550px) and (max-width: 991px) {
+    height: 200px;
+
+    .logo-wrapper,
+    .artist-name {
+      display: none;
+    }
+  }
+
+  @media screen and (max-width: 549px) {
+    height: 150px;
+
+    .logo-wrapper,
+    .artist-name {
+      display: none;
+    }
+  }
 `

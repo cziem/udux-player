@@ -14,4 +14,20 @@ export const StyledLayout: React.FC<LayoutProps> = styled(Layout)`
 
   .site-layout {
   }
+
+  .ant-layout-content {
+    margin: 76px 16px 16px 12px;
+    padding: 12px 24px;
+    min-height: 280px;
+    background: #000;
+  }
+
+  @media screen and (max-width: 992px) {
+    .ant-layout-content {
+      margin: 15px;
+      padding: 12px;
+
+      margin-top: 75px;
+    }
+  }
 `

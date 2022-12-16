@@ -1,4 +1,6 @@
 import { Layout } from "antd"
+import { ProfileCard } from "components/ProfileCard"
+import { useMediaQuery } from "utils"
 import { Drawer, Header } from "./components"
 import { StyledLayout } from "./styles"
 
@@ -8,23 +10,16 @@ interface Props {
   children: React.ReactNode
 }
 export const Layouts: React.FC<Props> = ({ children }) => {
+  const matches = useMediaQuery("(min-width: 992px)")
+
   return (
     <StyledLayout hasSider>
       <Drawer />
 
       <Layout className="site-layout">
-        <Header />
+        {matches ? <Header /> : <ProfileCard />}
 
-        <Content
-          style={{
-            margin: "76px 16px 16px 12px",
-            padding: "12 24",
-            minHeight: 280,
-            background: "#000",
-          }}
-        >
-          {children}
-        </Content>
+        <Content>{children}</Content>
       </Layout>
     </StyledLayout>
   )

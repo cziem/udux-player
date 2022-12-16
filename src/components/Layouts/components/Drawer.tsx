@@ -1,34 +1,25 @@
-import { Divider, Image, Space, Typography } from "antd"
+import { Divider, Space, Typography } from "antd"
 import { SearchIcon } from "components/Icons"
-import React, { useState } from "react"
+import { ProfileCard } from "components/ProfileCard"
+import React from "react"
 import { truncate } from "utils"
-import ProfileImage from "../../../assets/images/profile-image.png"
 import { drawerRoutes } from "./sider-data"
 import { StyledSider } from "./styles"
 
 const { Text } = Typography
 
 export const Drawer: React.FC = () => {
-  const [collapsed] = useState(false)
-
   return (
     <StyledSider
-      trigger={null}
-      collapsible
-      collapsed={collapsed}
       width="295"
+      trigger={null}
       style={{
         background: "#000",
         position: "relative",
         overflow: "hidden",
       }}
     >
-      <div className="profile-wrapper">
-        <div className="avatar">
-          <Image preview={false} src={ProfileImage} style={{ width: 45 }} />
-        </div>
-        <Text strong>Hey! Aleem</Text>
-      </div>
+      <ProfileCard />
 
       <div className="player-menu">
         <ul className="player-nav">
