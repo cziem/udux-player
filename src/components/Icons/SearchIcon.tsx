@@ -1,6 +1,9 @@
+import React from "react"
 import { IconProps } from "./types"
 
-export const SearchIcon: React.FC<IconProps> = ({ width, height, fill }) => (
+export const SearchIcon: React.FC<
+  IconProps & React.HTMLAttributes<HTMLDivElement>
+> = ({ width, height, fill }) => (
   <svg
     width={width || "18"}
     height={height || "18"}

@@ -53,6 +53,8 @@ export const StyledSider: React.FC<SiderProps> = styled(Sider)`
   .ant-layout-sider-children {
     display: flex;
     flex-direction: column;
+    position: fixed;
+    width: 295px;
   }
 
   .profile-wrapper {
@@ -73,5 +75,45 @@ export const StyledSider: React.FC<SiderProps> = styled(Sider)`
     flex: auto;
     background: transparent;
     background-image: url("/image/sider-bng.png");
+
+    overflow-y: scroll;
+
+    .player-nav {
+      margin: 1em 0 0 0;
+      padding-left: 1em;
+
+      .nav-item {
+        display: flex;
+        justify-content: space-between;
+        cursor: pointer;
+        color: #d9d9d9;
+        align-items: center;
+        list-style-type: none;
+        padding: 0.5em 0;
+
+        :hover .ant-typography,
+        :hover svg path {
+          fill: #fbba12;
+          color: #fbba12;
+        }
+
+        :hover svg#liked-songs-icon path {
+          stroke: #fbba12;
+          fill: none;
+        }
+
+        :hover svg#discover-icon path.discover-icon-fill {
+          fill: #fbba12;
+        }
+
+        svg {
+          margin-right: 1em;
+        }
+
+        .searchable-list {
+          align-self: flex-end;
+        }
+      }
+    }
   }
 `

@@ -7,8 +7,11 @@ export const StyledLayout: React.FC<LayoutProps> = styled(Layout)`
 
   .ant-layout .ant-layout-header {
     height: 95px;
+    position: fixed;
+    top: 0;
+    width: 100%;
   }
 
-  .ant-layout .ant-layout-sider {
+  .site-layout {
   }
 `

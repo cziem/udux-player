@@ -1,12 +1,10 @@
-import {
-  UploadOutlined,
-  UserOutlined,
-  VideoCameraOutlined,
-} from "@ant-design/icons"
-import { Image, Menu, Typography, Avatar } from "antd"
+import { Divider, Image, Space, Typography } from "antd"
+import { SearchIcon } from "components/Icons"
 import React, { useState } from "react"
-import { StyledSider } from "./styles"
+import { truncate } from "utils"
 import ProfileImage from "../../../assets/images/profile-image.png"
+import { drawerRoutes } from "./sider-data"
+import { StyledSider } from "./styles"
 
 const { Text } = Typography
 
@@ -21,6 +19,8 @@ export const Drawer: React.FC = () => {
       width="295"
       style={{
         background: "#000",
+        position: "relative",
+        overflow: "hidden",
       }}
     >
       <div className="profile-wrapper">
@@ -31,28 +31,65 @@ export const Drawer: React.FC = () => {
       </div>
 
       <div className="player-menu">
-        <Menu
-          theme="dark"
-          mode="inline"
-          defaultSelectedKeys={["1"]}
-          items={[
-            {
-              key: "1",
-              icon: <UserOutlined />,
-              label: "nav 1",
-            },
-            {
-              key: "2",
-              icon: <VideoCameraOutlined />,
-              label: "nav 2",
-            },
-            {
-              key: "3",
-              icon: <UploadOutlined />,
-              label: "nav 3",
-            },
-          ]}
-        />
+        <ul className="player-nav">
+          {drawerRoutes.map(dr => {
+            return (
+              <React.Fragment>
+                {dr.children.map((navItem, idx) => {
+                  if (!navItem.items.length) {
+                    return (
+                      <li className="nav-item" key={`${idx}-${navItem.label}`}>
+                        <Space>
+                          {<navItem.icon />}
+                          <Text>{navItem.label}</Text>
+                        </Space>
+
+                        {dr.searchable && <SearchIcon />}
+                      </li>
+                    )
+                  } else {
+                    return (
+                      <React.Fragment>
+                        <li
+                          className="nav-item"
+                          key={`${idx}-${navItem.label}`}
+                        >
+                          <Space>
+                            {<navItem.icon />}
+                            <Text>{navItem.label}</Text>
+                          </Space>
+
+                          {dr.searchable && <SearchIcon />}
+                        </li>
+
+                        {navItem?.items && (
+                          <ul
+                            className="player-nav"
+                            style={{
+                              padding: 0,
+                            }}
+                          >
+                            {navItem?.items.map((item, idx) => {
+                              return (
+                                <li
+                                  className="nav-item"
+                                  key={`${idx}-${item.label}`}
+                                >
+                                  <Text>{truncate(item.label)}</Text>
+                                </li>
+                              )
+                            })}
+                          </ul>
+                        )}
+                      </React.Fragment>
+                    )
+                  }
+                })}
+                <Divider />
+              </React.Fragment>
+            )
+          })}
+        </ul>
       </div>
     </StyledSider>
   )
