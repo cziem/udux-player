@@ -15,8 +15,8 @@ export const Category: React.FC<CategoryProps> = ({ title, playlist }) => {
       <Title level={3}>{title}</Title>
 
       <div className="playlist-wrapper">
-        {playlist.map(pl => (
-          <Playlist {...pl} />
+        {playlist.map((pl, idx) => (
+          <Playlist {...pl} key={`${idx}-${pl.coverArt}`} />
         ))}
       </div>
     </StyledCategory>

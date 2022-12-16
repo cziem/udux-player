@@ -55,24 +55,6 @@ export const StyledSider: React.FC<SiderProps> = styled(Sider)`
     flex-direction: column;
     position: fixed;
     width: 295px;
-
-    /* Custom scroll bar */
-    /* scroll-behavior: smooth;
-    box-sizing: border-box;
-
-    ::-webkit-scrollbar {
-      width: 6px;
-    }
-
-    ::-webkit-scrollbar-track {
-      background: transparent;
-    }
-
-    ::-webkit-scrollbar-thumb {
-      border-radius: 6px;
-      width: 1px;
-      background: #fbba12;
-    } */
   }
 
   .profile-wrapper {
@@ -95,6 +77,20 @@ export const StyledSider: React.FC<SiderProps> = styled(Sider)`
     background-image: url("/image/sider-bng.png");
 
     overflow-y: scroll;
+
+    ::-webkit-scrollbar {
+      width: 6px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      border-radius: 6px;
+      width: 1px;
+      background: #fbba12;
+    }
 
     .player-nav {
       margin: 1em 0 0 0;

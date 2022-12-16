@@ -32,9 +32,9 @@ export const Drawer: React.FC = () => {
 
       <div className="player-menu">
         <ul className="player-nav">
-          {drawerRoutes.map(dr => {
+          {drawerRoutes.map((dr, idx) => {
             return (
-              <React.Fragment>
+              <React.Fragment key={idx}>
                 {dr.children.map((navItem, idx) => {
                   if (!navItem.items.length) {
                     return (
@@ -49,11 +49,8 @@ export const Drawer: React.FC = () => {
                     )
                   } else {
                     return (
-                      <React.Fragment>
-                        <li
-                          className="nav-item"
-                          key={`${idx}-${navItem.label}`}
-                        >
+                      <React.Fragment key={`${idx}-${navItem.label}`}>
+                        <li className="nav-item">
                           <Space>
                             {<navItem.icon />}
                             <Text>{navItem.label}</Text>
