@@ -1,4 +1,4 @@
-import { Layout, LayoutProps, SiderProps } from "antd"
+import { Layout, LayoutProps, SiderProps, SpaceProps } from "antd"
 import React from "react"
 import styled from "styled-components"
 
@@ -123,5 +123,32 @@ export const StyledSider: React.FC<SiderProps> = styled(Sider)`
 
   @media screen and (max-width: 992px) {
     display: none;
+  }
+`
+export const StyledBottomNav: React.FC<SpaceProps> = styled("div")`
+  background: #000;
+  background-image: url("/image/sider-bng.png");
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+  align-items: center;
+
+  .nav-item {
+    padding: 1.5em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    :hover svg {
+      fill: #fbba12;
+      color: #fbba12;
+    }
+  }
+
+  svg {
+    height: 30px;
+    width: 30px;
   }
 `

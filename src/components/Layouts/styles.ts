@@ -23,6 +23,10 @@ export const StyledLayout: React.FC<LayoutProps> = styled(Layout)`
   }
 
   @media screen and (max-width: 992px) {
+    .site-layout {
+      padding-bottom: 6em;
+    }
+
     .ant-layout-content {
       margin: 15px;
       padding: 12px;
