@@ -3,7 +3,7 @@ import { Playlist } from "components/Playlist"
 import { PlaylistProps } from "components/Playlist/types"
 import { StyledCategory } from "./styles"
 
-const { Text, Title } = Typography
+const { Title } = Typography
 
 export interface CategoryProps {
   title: string
