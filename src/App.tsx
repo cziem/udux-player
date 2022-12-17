@@ -1,7 +1,6 @@
 import { Category, CoverArt, Layouts } from "components"
 import { AntdConfigProvider } from "config"
 import { playlistCategories } from "utils"
-import "./App.css"
 
 function App() {
   return (
