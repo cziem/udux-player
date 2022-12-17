@@ -26,15 +26,13 @@ export const Playlist: React.FC<PlaylistProps> = ({
               translateY: -10,
               y: 100,
               duration: 0.2,
-              zIndex: 0,
             })
           }}
           onMouseLeave={e => {
             gsap.to(e.currentTarget, {
-              translateY: 0,
+              translate: 0,
               y: 0,
               duration: 0.2,
-              zIndex: 0,
             })
           }}
         />

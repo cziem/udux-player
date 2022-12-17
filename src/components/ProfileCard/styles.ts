@@ -12,6 +12,7 @@ export const StyledProfileCard: React.FC<SiderProps> = styled("div")`
   &.mobile-mode {
     position: fixed;
     width: 100%;
+    z-index: 9999;
   }
 
   .avatar {
