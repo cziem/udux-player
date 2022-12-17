@@ -28,8 +28,8 @@ export const StyledLayout: React.FC<LayoutProps> = styled(Layout)`
     }
 
     .ant-layout-content {
-      margin: 15px;
-      padding: 12px;
+      margin: 15px 0;
+      padding: 12px 0;
 
       margin-top: 75px;
     }

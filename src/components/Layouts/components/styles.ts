@@ -8,7 +8,7 @@ export const StyledHeader: React.FC<LayoutProps> = styled(Header)`
   display: flex;
   align-items: center;
   height: 95px;
-  z-index: 9999;
+  z-index: 9999 !important;
 
   .navigators {
     display: flex;
@@ -67,7 +67,7 @@ export const StyledSider: React.FC<SiderProps> = styled(Sider)`
     background: transparent;
     background-image: url("/image/sider-bng.png");
 
-    overflow-y: scroll;
+    overflow-y: auto;
 
     ::-webkit-scrollbar {
       width: 6px;

@@ -32,6 +32,10 @@ export const StyledCategory: React.FC<SpaceProps> = styled("div")`
     }
   }
 
+  @media screen and (max-width: 992px) {
+    padding: 0 1.58em;
+  }
+
   @media screen and (max-width: 622px) {
     h3.ant-typography {
       font-size: 1.15em;

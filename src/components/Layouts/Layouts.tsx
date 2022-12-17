@@ -3,6 +3,7 @@ import { ProfileCard } from "components/ProfileCard"
 import { useMediaQuery } from "utils"
 import { BottomNavigator, Drawer, Header } from "./components"
 import { StyledLayout } from "./styles"
+import React from "react"
 
 const { Content } = Layout
 
