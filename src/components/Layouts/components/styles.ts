@@ -67,22 +67,6 @@ export const StyledSider: React.FC<SiderProps> = styled(Sider)`
     background: transparent;
     background-image: url("/image/sider-bng.png");
 
-    overflow-y: auto;
-
-    ::-webkit-scrollbar {
-      width: 6px;
-    }
-
-    ::-webkit-scrollbar-track {
-      background: transparent;
-    }
-
-    ::-webkit-scrollbar-thumb {
-      border-radius: 6px;
-      width: 1px;
-      background: #fbba12;
-    }
-
     .player-nav {
       margin: 1em 0 0 0;
       padding-left: 1em;
@@ -118,6 +102,33 @@ export const StyledSider: React.FC<SiderProps> = styled(Sider)`
         .searchable-list {
           align-self: flex-end;
         }
+      }
+    }
+
+    .playlist-nav {
+      margin: 2.5em 0 0.5em 0;
+      padding: 2em 1em;
+      max-height: 400px;
+      width: 275px;
+      position: fixed;
+      overflow-y: scroll;
+
+      ::-webkit-scrollbar {
+        width: 6px;
+      }
+
+      ::-webkit-scrollbar-track {
+        background: transparent;
+      }
+
+      ::-webkit-scrollbar-thumb {
+        border-radius: 6px;
+        width: 1px;
+        background: #fbba12;
+      }
+
+      .nav-item {
+        width: 100%;
       }
     }
   }

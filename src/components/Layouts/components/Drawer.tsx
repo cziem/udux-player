@@ -52,7 +52,8 @@ export const Drawer: React.FC = () => {
 
                         {navItem?.items && (
                           <ul
-                            className="player-nav"
+                            className="playlist-nav"
+                            // className="player-nav"
                             style={{
                               padding: 0,
                             }}

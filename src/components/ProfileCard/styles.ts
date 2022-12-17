@@ -4,7 +4,7 @@ import styled from "styled-components"
 
 export const StyledProfileCard: React.FC<SiderProps> = styled("div")`
   background: #0f0f0f;
-  height: 95px;
+  height: 75px;
   margin-bottom: 0.2em;
   display: flex;
   align-items: center;
@@ -19,10 +19,5 @@ export const StyledProfileCard: React.FC<SiderProps> = styled("div")`
     cursor: pointer;
     padding-left: 1em;
     margin-right: 1em;
-  }
-
-  @media screen and (max-width: 992px) {
-    height: 75px;
-    top: 0;
   }
 `
