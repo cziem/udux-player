@@ -20,6 +20,7 @@ export const StyledLayout: React.FC<LayoutProps> = styled(Layout)`
     padding: 12px 24px;
     min-height: 280px;
     background: #000;
+    position: relative;
   }
 
   @media screen and (max-width: 992px) {

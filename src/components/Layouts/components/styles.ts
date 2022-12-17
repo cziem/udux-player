@@ -60,6 +60,8 @@ export const StyledSider: React.FC<SiderProps> = styled(Sider)`
     flex-direction: column;
     position: fixed;
     width: 295px;
+    top: 0;
+    left: 0;
   }
 
   .player-menu {
